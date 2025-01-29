@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css">
+     <title>Rock Paper Scissor</title>
+</head>
+
+<body>
+     <h1>Rock Paper Scissor</h1>
+
+     <div id="main_page">
+          <div class="playground">
+               <button onclick="getResult(1); toggleDivs()" id="rock">
+                    <div class="rock image"></div>
+               </button>
+               <button onclick="getResult(2); toggleDivs()" id="paper">
+                    <div class="paper image"></div>
+               </button>
+               <button onclick="getResult(3); toggleDivs()" id="scissor">
+                    <div class="scissor image"></div>
+               </button>
+          </div>
+     </div>
+
+     <div id="second_page" class="hidden">
+          <h2 id="winner"></h2>
+          <div class="playground2">
+               <div id="symbol1" class="image2 symbol1"></div>
+               <div id="symbol2" class="image2 symbol2"></div>
+          </div>
+     </div>
+
+     <a href="index.html" onclick="activeGame()">Play</a>
+
+     <script>
+          function activeGame() {
+
+               let gameImages = document.querySelectorAll(".image");
+
+               gameImages.forEach(image => image.classList.toggle("activeGame"));
+          }
+
+          function toggleDivs() {
+               document.getElementById("main_page").classList.toggle("hidden");
+               document.getElementById("second_page").classList.toggle("hidden");
+          }
+
+     </script>
+     <script src="scipt.js"></script>
+</body>
+
+</html>
