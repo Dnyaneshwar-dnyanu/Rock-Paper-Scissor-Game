@@ -11,44 +11,38 @@
 <body>
      <h1>Rock Paper Scissor</h1>
 
-     <div id="main_page">
+     <div id="first_page">
+          <div class="main_page"></div>
+          <a href="#" onclick="toggleDivFandS()">Play</a>
+     </div>
+
+     <div id="second_page" class="hidden">
+          <h2>Choose : </h2>
           <div class="playground">
-               <button onclick="getResult(1); toggleDivs()" id="rock">
+               <button onclick="getResult(1); toggleDivSandT()" id="rock">
                     <div class="rock image"></div>
+                    Rock
                </button>
-               <button onclick="getResult(2); toggleDivs()" id="paper">
+               <button onclick="getResult(2); toggleDivSandT()" id="paper">
                     <div class="paper image"></div>
+                    Paper
                </button>
-               <button onclick="getResult(3); toggleDivs()" id="scissor">
+               <button onclick="getResult(3); toggleDivSandT()" id="scissor">
                     <div class="scissor image"></div>
+                    Scissor
                </button>
           </div>
      </div>
 
-     <div id="second_page" class="hidden">
+     <div id="third_page" class="hidden">
           <h2 id="winner"></h2>
           <div class="playground2">
                <div id="symbol1" class="image2 symbol1"></div>
                <div id="symbol2" class="image2 symbol2"></div>
           </div>
+          <a href="#" id="play_again_button" onclick="toggleDivSandT()">Play Again</a>
      </div>
 
-     <a href="index.html" onclick="activeGame()">Play</a>
-
-     <script>
-          function activeGame() {
-
-               let gameImages = document.querySelectorAll(".image");
-
-               gameImages.forEach(image => image.classList.toggle("activeGame"));
-          }
-
-          function toggleDivs() {
-               document.getElementById("main_page").classList.toggle("hidden");
-               document.getElementById("second_page").classList.toggle("hidden");
-          }
-
-     </script>
      <script src="scipt.js"></script>
 </body>
 

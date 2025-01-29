@@ -5,21 +5,52 @@ function getName(name) {
 }
 
 function getImage(image) {
-     let rockImage = "url('rock2.png')";
-     let paperImage = "url('paper.png')";
-     let scissorImage = "url('scissor.png')";
+     let rockImage = "url('/assets/rock.png')";
+     let paperImage = "url('/assets/paper.png')";
+     let scissorImage = "url('/assets/scissor.png')";
 
      if (image == 1) return rockImage;
      else if (image == 2) return paperImage;
      else return scissorImage;
 }
+
+function changeMessage() {
+
+     let messages = ["Rock", "Paper", "Scissor"];
+     let index = 0;
+     let count_down_element = document.getElementById("winner");
+
+     let interval = setInterval(() => {
+          count_down_element.innerText = messages[index % messages.length];
+          index++;
+     }, 1000);  // Change text every 1 second
+
+     setTimeout(() => {
+          clearInterval(interval);  // Stop after 3 second
+     }, 3000);
+}
+
+function toggleDivFandS() {
+     document.getElementById("first_page").classList.toggle("hidden");
+     document.getElementById("second_page").classList.toggle("hidden");
+}
+
+function toggleDivSandT() {
+     document.getElementById("second_page").classList.toggle("hidden");
+     document.getElementById("third_page").classList.toggle("hidden");
+}
+
 function getResult(x) {
+
+     document.getElementById("play_again_button").style.display = "none";
 
      document.getElementById("symbol1").style.backgroundImage = getImage(1);
      document.getElementById("symbol2").style.backgroundImage = getImage(1);
-     document.getElementById("symbol1").style.animation = "wave1 0.5s infinite alternate-reverse";
-     document.getElementById("symbol2").style.animation = "wave2 0.5s infinite alternate-reverse";
-     document.getElementById("winner").innerText = "The winner is loading....";
+
+     changeMessage();
+     
+     document.getElementById("symbol1").style.animation = "wave1 0.65s infinite alternate-reverse";
+     document.getElementById("symbol2").style.animation = "wave2 0.65s infinite alternate-reverse";
 
      let y = Math.floor(Math.random() * 3) + 1;
      console.log(y);
@@ -53,5 +84,8 @@ function getResult(x) {
           }
           document.getElementById("symbol1").style.animation = "none";
           document.getElementById("symbol2").style.animation = "none";
-     }, 3000);
+
+          document.getElementById("play_again_button").style.display = "block";
+
+     }, 4000);
 }

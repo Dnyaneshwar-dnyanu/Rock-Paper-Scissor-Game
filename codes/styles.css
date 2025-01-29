@@ -6,6 +6,14 @@ body {
      background-color: rgba(234, 23, 90, 0.34);
 }
 
+.main_page {
+     height: 80vh;
+     background-image: url("/assets/image-Photoroom.png");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: contain;
+}
+
 .hidden {
      display: none;
 }
@@ -17,27 +25,27 @@ body {
 }
 
 .image {
-     height: 80vh;
+     height: 70vh;
      width: 30vw;
      background-repeat: no-repeat;
      background-position: center;
      background-size: 80% 70%;
 }
 
-.activeGame:active {
+.image:active {
      background-size: 60% 60%;
 }
 
 .rock {
-     background-image: url("rock2.png");
+     background-image: url("/assets/rock.png");
 }
 
 .paper {
-     background-image: url("paper.png");
+     background-image: url("/assets/paper.png");
 }
 
 .scissor {
-     background-image: url("scissor.png");
+     background-image: url("/assets/scissor.png");
 }
 
 a {
@@ -66,7 +74,7 @@ a:active {
 
 .image2 {
      height: 70vh;
-     width: 30vw;
+     width: 35vw;
      background-repeat: no-repeat;
      background-position: center;
      background-size: contain;
@@ -78,11 +86,11 @@ a:active {
 
 @keyframes wave1 {
      0% {
-          transform: rotate(140deg)
+          transform: rotate(160deg)
      }
 
      100% {
-          transform: rotate(60deg);
+          transform: rotate(50deg);
      }
 }
 
@@ -105,11 +113,20 @@ button {
      border: none;
 }
 
-h1, h2{
+.playground button, h1, h2{
      text-align: center;
      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
      font-weight: 100;
 }
+
+
+.playground button {
+     font-size: xx-large;
+}
+
+/* .play_again_button {
+     display: none;
+} */
 
 h2 {
      font-weight: 0;
