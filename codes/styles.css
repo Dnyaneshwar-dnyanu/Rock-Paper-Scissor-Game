@@ -6,9 +6,13 @@ body {
      background-color: rgba(234, 23, 90, 0.34);
 }
 
+.header {
+     position:static;
+}
+
 .main_page {
      height: 80vh;
-     background-image: url("/assets/image-Photoroom.png");
+     background-image: url("/assets/rock_paper_scissor.png");
      background-position: center;
      background-repeat: no-repeat;
      background-size: contain;
@@ -123,10 +127,6 @@ button {
 .playground button {
      font-size: xx-large;
 }
-
-/* .play_again_button {
-     display: none;
-} */
 
 h2 {
      font-weight: 0;

@@ -47,6 +47,8 @@ function getResult(x) {
      document.getElementById("symbol1").style.backgroundImage = getImage(1);
      document.getElementById("symbol2").style.backgroundImage = getImage(1);
 
+     document.getElementById("winner").innerText = "";
+
      changeMessage();
      
      document.getElementById("symbol1").style.animation = "wave1 0.65s infinite alternate-reverse";
